@@ -345,9 +345,48 @@
       color: var(--accent);
       text-decoration: none;
     }
-    .footer-link {
-      margin-top: 0.5rem;
+    .pill-prompt {
       font-size: 0.75rem;
+      color: var(--text-dim);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .pill-choice {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.5rem 1.8rem;
+      border-radius: 50px;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .red-pill {
+      background: #8b1a1a;
+      color: #f0c0c0;
+      border: 1px solid #a02020;
+    }
+    .red-pill:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(160, 32, 32, 0.4);
+    }
+    .blue-pill {
+      background: #1a2a5e;
+      color: #b0c0f0;
+      border: 1px solid #2040a0;
+    }
+    .blue-pill:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(32, 64, 160, 0.4);
     }
 
     /* RESPONSIVE */
@@ -528,7 +567,11 @@
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 &middot; humanitieslaststand.com</p>
-    <p class="footer-link">Build your sovereign agent at <a href="https://www.signalpot.dev" target="_blank" rel="noopener">SignalPot</a></p>
+    <p class="pill-prompt">The path is yours</p>
+    <div class="pill-choice">
+      <a href="https://www.signalpot.dev" target="_blank" rel="noopener" class="pill red-pill">Build</a>
+      <a href="https://www.google.com" target="_blank" rel="noopener" class="pill blue-pill">Sleep</a>
+    </div>
   </footer>
 
   <script>
